@@ -29,10 +29,7 @@ const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
           type === "type1" ? "lg:pl-16" : "lg:pr-16"
         }`}
       >
-        <span className="uppercase text-sm text-gray-400 tracking-widest">
-          BENnefits
-        </span>
-        <h2 className="font-semibold text-4xl mt-5">Happening cities </h2>
+        <h2 className="font-medium  text-4xl mt-5">Happening cities </h2>
 
         <ul className="space-y-10 mt-16">
           <li className="space-y-4">
@@ -46,7 +43,7 @@ const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
             </span>
           </li>
           <li className="space-y-4">
-            <Badge color="green" name="Exposure " />
+            <Badge name="Exposure " />
             <span className="block text-xl font-semibold">
               Reach millions with Chisfis
             </span>
@@ -56,7 +53,7 @@ const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
             </span>
           </li>
           <li className="space-y-4">
-            <Badge color="red" name="Secure" />
+            <Badge name="Secure" />
             <span className="block text-xl font-semibold">
               Secure and simple
             </span>

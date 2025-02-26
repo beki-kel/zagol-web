@@ -30,7 +30,7 @@ const CardCategory3: FC<CardCategory3Props> = ({
       </div>
       <div className="mt-4 truncate">
         <h2
-          className={`text-base sm:text-lg text-neutral-900 dark:text-neutral-100 font-medium truncate`}
+          className={`text-[#2995D3] text-base sm:text-lg dark:text-neutral-100 font-medium truncate`}
         >
           {name}
         </h2>
