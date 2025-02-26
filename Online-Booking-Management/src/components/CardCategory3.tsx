@@ -26,11 +26,11 @@ const CardCategory3: FC<CardCategory3Props> = ({
           fill
           sizes="(max-width: 400px) 100vw, 300px"
         />
-        <span className="opacity-0 group-hover:opacity-100 absolute inset-0 bg-black bg-opacity-10 transition-opacity"></span>
+        <span className="opacity-0 group-hover:opacity-100 absolute inset-0 bg-[#2995D3] bg-opacity-40 transition-opacity"></span>
       </div>
       <div className="mt-4 truncate">
         <h2
-          className={`text-[#2995D3] text-base sm:text-lg dark:text-neutral-100 font-medium truncate`}
+          className={`text-[#2995D3] text-base sm:text-lg font-medium truncate`}
         >
           {name}
         </h2>
