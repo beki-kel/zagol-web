@@ -6,8 +6,6 @@ import Header from "./Header";
 import { usePathname } from "next/navigation";
 import { useThemeMode } from "@/utils/useThemeMode";
 
-export type SiteHeaders = "Header 1" | "Header 2" | "Header 3";
-
 let OPTIONS = {
   root: null,
   rootMargin: "0px",
@@ -41,8 +39,6 @@ const SiteHeader = () => {
   };
 
   useEffect(() => {
-    // disconnect the observer
-    // observer for show the LINE bellow header
     if (!PAGES_HIDE_HEADER_BORDER.includes(pathname as PathName)) {
       OBSERVER && OBSERVER.disconnect();
       OBSERVER = null;
@@ -61,7 +57,7 @@ const SiteHeader = () => {
         ? ""
         : "shadow-sm dark:border-b dark:border-neutral-700";
     }
-    return <Header className={headerClassName} navType="MainNav1" />;
+    return <Header className={headerClassName} />;
   };
 
   return (

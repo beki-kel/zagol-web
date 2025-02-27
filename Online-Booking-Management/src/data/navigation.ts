@@ -167,21 +167,16 @@ export const NAVIGATION_DEMO: NavItemType[] = [
   {
     id: ncNanoId(),
     href: "/",
-    name: "Stays",
+    name: "Book",
     type: "none",
   },
   {
     id: ncNanoId(),
     href: "/",
-    name: "Cars",
+    name: "About Us",
     type: "none",
   },
-  {
-    id: ncNanoId(),
-    href: "/",
-    name: "Flights",
-    type: "none",
-  },
+
   {
     id: ncNanoId(),
     href: "/",
