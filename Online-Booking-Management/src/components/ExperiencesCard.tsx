@@ -47,7 +47,6 @@ const ExperiencesCard: FC<ExperiencesCardProps> = ({
           galleryImgs={galleryImgs}
           href={href}
         />
-        <BtnLikeIcon isLiked={like} className="absolute right-3 top-3" />
         {saleOff && <SaleOffBadge className="absolute left-3 top-3" />}
       </div>
     );
@@ -58,12 +57,13 @@ const ExperiencesCard: FC<ExperiencesCardProps> = ({
       <div className={size === "default" ? "py-4 space-y-3" : "p-3 space-y-1"}>
         <div className="space-y-2">
           <div className="flex items-center text-neutral-500 dark:text-neutral-400 text-sm space-x-2">
-            {size === "default" && <MapPinIcon className="w-4 h-4" />}
+            {size === "default" && (
+              <MapPinIcon className="w-4 h-4 text-[#2995D3]" />
+            )}
             <span className="">{address}</span>
           </div>
 
           <div className="flex items-center space-x-2">
-            {isAds && <Badge name="ADS" color="green" />}
             <h2
               className={` font-medium capitalize ${
                 size === "default" ? "text-base" : "text-base"
@@ -75,7 +75,7 @@ const ExperiencesCard: FC<ExperiencesCardProps> = ({
         </div>
         <div className="border-b border-neutral-100 dark:border-neutral-800"></div>
         <div className="flex justify-between items-center">
-          <span className="text-base font-semibold">
+          <span className="text-base font-semibold text-[#2995D3]">
             {price}
             {` `}
             {size === "default" && (
@@ -84,7 +84,7 @@ const ExperiencesCard: FC<ExperiencesCardProps> = ({
               </span>
             )}
           </span>
-          <StartRating reviewCount={reviewCount} point={reviewStart} />
+          <StartRating point={reviewStart} />
         </div>
       </div>
     );

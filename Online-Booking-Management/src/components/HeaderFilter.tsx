@@ -8,8 +8,8 @@ import ButtonSecondary from "@/shared/ButtonSecondary";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 export interface HeaderFilterProps {
-  tabActive: string;
-  tabs: string[];
+  tabActive?: string;
+  tabs?: string[];
   heading: ReactNode;
   subHeading?: ReactNode;
   onClickTab?: (item: string) => void;
@@ -17,7 +17,6 @@ export interface HeaderFilterProps {
 
 const HeaderFilter: FC<HeaderFilterProps> = ({
   tabActive,
-  tabs,
   subHeading = "",
   heading = "Latest Articles 🎈",
   onClickTab = () => {},
@@ -36,26 +35,15 @@ const HeaderFilter: FC<HeaderFilterProps> = ({
   return (
     <div className="flex flex-col mb-8 relative">
       <Heading desc={subHeading}>{heading}</Heading>
-      <div className="flex items-center justify-between">
-        <Nav
-          className="sm:space-x-2"
-          containerClassName="relative flex w-full overflow-x-auto text-sm md:text-base hiddenScrollbar"
-        >
-          {tabs.map((item, index) => (
-            <NavItem
-              key={index}
-              isActive={tabActiveState === item}
-              onClick={() => handleClickTab(item)}
-            >
-              {item}
-            </NavItem>
-          ))}
-        </Nav>
+      <div className="flex items-center justify-end">
         <span className="hidden sm:block flex-shrink-0">
-          <ButtonSecondary href="/listing-stay" className="!leading-none">
+          <ButtonSecondary
+            href="/experience-listings/listing-experiences"
+            className="!leading-none border-[#2995D3] "
+          >
             <div className="flex items-center justify-center">
               <span>View all</span>
-              <ArrowRightIcon className="w-5 h-5 ml-3" />
+              <ArrowRightIcon className="w-5 h-5 ml-3 text-[#2995D3] " />
             </div>
           </ButtonSecondary>
         </span>
