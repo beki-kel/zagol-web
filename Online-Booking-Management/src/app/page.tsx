@@ -88,12 +88,12 @@ function PageHome() {
       <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
         <SectionHero className="pt-10 lg:pt-16 lg:pb-16" />
         <SectionSliderNewCategories categories={DEMO_CATS} />
-        <section id="aboutUs" className="scroll-mt-20">
+        <div id="aboutUs" className="scroll-mt-20">
           <SectionOurFeatures />
-        </section>
-        <section id="FeaturedPackages" className="scroll-mt-24">
+        </div>
+        <div id="FeaturedPackages" className="scroll-mt-24">
           <SectionGridFeaturePlaces cardType="card2" />
-        </section>
+        </div>
         <SectionVideos />
       </div>
     </main>
