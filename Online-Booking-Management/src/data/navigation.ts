@@ -166,20 +166,20 @@ const templatesChildrenMenus: NavItemType[] = [
 export const NAVIGATION_DEMO: NavItemType[] = [
   {
     id: ncNanoId(),
-    href: "/",
+    href: "#searchForm",
     name: "Book",
     type: "none",
   },
   {
     id: ncNanoId(),
-    href: "/",
+    href: "#aboutUs",
     name: "About Us",
     type: "none",
   },
 
   {
     id: ncNanoId(),
-    href: "/",
+    href: "#FeaturedPackages",
     name: "Packages",
     type: "none",
   },

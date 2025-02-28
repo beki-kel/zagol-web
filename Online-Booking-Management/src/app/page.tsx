@@ -89,10 +89,10 @@ function PageHome() {
         <SectionHero className="pt-10 lg:pt-16 lg:pb-16" />
         <SectionSliderNewCategories categories={DEMO_CATS} />
         <section id="aboutUs" className="scroll-mt-20">
-          <SectionOurFeatures id="aboutUs" />
+          <SectionOurFeatures />
         </section>
         <section id="FeaturedPackages" className="scroll-mt-24">
-          <SectionGridFeaturePlaces id="packages" cardType="card2" />
+          <SectionGridFeaturePlaces cardType="card2" />
         </section>
         <SectionVideos />
       </div>
