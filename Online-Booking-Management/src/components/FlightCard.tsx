@@ -34,7 +34,7 @@ const FlightCard: FC<FlightCardProps> = ({ className = "", data }) => {
           </div>
           <div className="flex my-5 md:my-0">
             <div className="flex-shrink-0 flex flex-col items-center py-2">
-              <span className="block w-6 h-6 rounded-full border border-neutral-400"></span>
+              <span className="block w-6 h-6 rounded-full border border-neutral-400 bg-[#2995D3]"></span>
               <span className="block flex-grow border-l border-neutral-400 border-dashed my-1"></span>
               <span className="block w-6 h-6 rounded-full border border-neutral-400"></span>
             </div>
@@ -171,7 +171,7 @@ const FlightCard: FC<FlightCardProps> = ({ className = "", data }) => {
           {/* PRICE */}
           <div className="flex-[4] whitespace-nowrap sm:text-right">
             <div>
-              <span className="text-xl font-semibold text-secondary-6000">
+              <span className="text-xl font-semibold text-[#2995D3]">
                 {data.price}
               </span>
             </div>

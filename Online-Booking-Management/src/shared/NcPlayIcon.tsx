@@ -10,7 +10,7 @@ const NcPlayIcon: FC<NcPlayIconProps> = ({ className = "" }) => {
       className={`nc-NcPlayIcon bg-white bg-opacity-30 backdrop-filter backdrop-blur rounded-full w-20 h-20 p-3 lg:w-52 lg:h-52 lg:p-12 ${className}`}
       data-nc-id="NcPlayIcon"
     >
-      <div className="w-full h-full bg-white rounded-full text-primary-500 relative">
+      <div className="w-full h-full bg-white rounded-full text-[#2995D3] relative">
         <span className="absolute inset-0 flex items-center justify-center">
           <svg
             className="w-8 h-8 md:w-12 md:h-12"

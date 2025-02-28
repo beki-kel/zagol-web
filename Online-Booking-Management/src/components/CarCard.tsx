@@ -46,7 +46,7 @@ const CarCard: FC<CarCardProps> = ({
             sizes="(max-width: 640px) 100vw, 350px"
           />
         </div>
-        <BtnLikeIcon isLiked={like} className="absolute right-3 top-3 z-[1]" />
+
         {saleOff && <SaleOffBadge className="absolute left-3 top-3" />}
       </div>
     );
@@ -57,7 +57,6 @@ const CarCard: FC<CarCardProps> = ({
       <div className={size === "default" ? "p-5  space-y-4" : "p-3  space-y-2"}>
         <div className="space-y-2">
           <div className="flex items-center space-x-2">
-            {isAds && <Badge name="ADS" color="green" />}
             <h2
               className={`  capitalize ${
                 size === "default"
@@ -76,7 +75,7 @@ const CarCard: FC<CarCardProps> = ({
         </div>
         <div className="w-14  border-b border-neutral-100 dark:border-neutral-800"></div>
         <div className="flex justify-between items-center">
-          <span className="text-base font-semibold">
+          <span className="text-base text-[#2995D3] font-semibold">
             {price}
             {` `}
             {size === "default" && (
@@ -85,7 +84,7 @@ const CarCard: FC<CarCardProps> = ({
               </span>
             )}
           </span>
-          <StartRating reviewCount={reviewCount} point={reviewStart} />
+          <StartRating point={reviewStart} />
         </div>
       </div>
     );
@@ -93,7 +92,7 @@ const CarCard: FC<CarCardProps> = ({
 
   return (
     <div
-      className={`nc-CarCard group relative border border-neutral-200 dark:border-neutral-700 rounded-3xl overflow-hidden bg-white dark:bg-neutral-900 ${className}`}
+      className={`nc-CarCard group relative border border-[#2995D3] dark:border-neutral-700 rounded-3xl overflow-hidden bg-white dark:bg-neutral-900 ${className}`}
       data-nc-id="CarCard"
     >
       <Link href={href} className="flex flex-col">

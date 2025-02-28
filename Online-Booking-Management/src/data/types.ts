@@ -89,7 +89,6 @@ export interface StayDataType {
   };
 }
 
-//
 export interface ExperiencesDataType {
   id: string | number;
   author: AuthorType;

@@ -33,9 +33,6 @@ const MainNav1: FC<MainNav1Props> = ({ className = "" }) => {
           <div className="hidden xl:flex space-x-5">
             <SwitchDarkMode />
             <div className="px-1" />
-            <ButtonPrimary className="self-center" href="/login">
-              Sign up
-            </ButtonPrimary>
           </div>
 
           <div className="flex xl:hidden items-center">
