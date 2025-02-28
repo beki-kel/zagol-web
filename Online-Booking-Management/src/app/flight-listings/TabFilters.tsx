@@ -367,7 +367,7 @@ const TabFilters = () => {
     );
   };
 
-  const renderTabsPriceRage = () => {
+  const renderTabsPriceRange = () => {
     return (
       <Popover className="relative">
         {({ open, close }) => (
@@ -478,14 +478,14 @@ const TabFilters = () => {
   const renderTabOnSale = () => {
     return (
       <div
-        className={`flex text-[#2995D3] items-center justify-center px-4 py-2 text-sm rounded-full border focus:outline-none cursor-pointer transition-all ${
+        className={`flex  items-center justify-center px-4 py-2 text-sm rounded-full border focus:outline-none cursor-pointer transition-all ${
           isOnSale
-            ? "border-[#2995D3] bg-[#2995D3] bg-opacity-10 text-primary-700"
+            ? "border-[#2995D3] bg-[#2995D3] bg-opacity-10 text-[#2995D3]"
             : "border-neutral-300 dark:border-neutral-700"
         }`}
         onClick={() => setIsOnSale(!isOnSale)}
       >
-        <span className="text-[#2995D3]">On sale</span>
+        <span>On sale</span>
         {isOnSale && renderXClear()}
       </div>
     );
@@ -736,7 +736,7 @@ const TabFilters = () => {
       <div className="hidden lg:flex space-x-4">
         {renderTabsTypeOfAirlines()}
         {renderTabsStopPoints()}
-        {renderTabsPriceRage()}
+        {renderTabsPriceRange()}
         {renderTabOnSale()}
       </div>
 
