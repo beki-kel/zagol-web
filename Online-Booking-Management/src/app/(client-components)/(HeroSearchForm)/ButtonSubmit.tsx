@@ -6,11 +6,10 @@ interface Props {
   href?: PathName;
 }
 
-const ButtonSubmit: FC<Props> = ({ href = "/listing-stay-map" }) => {
+const ButtonSubmit: FC<Props> = ({ href = "/stay-listings/listing-stay" }) => {
   return (
     <Link
       href={href}
-      type="button"
       className="h-14 md:h-16 w-full md:w-16 rounded-full bg-[#2995D3] hover:bg-opacity-80 flex items-center justify-center text-neutral-50 focus:outline-none"
     >
       <span className="mr-3 md:hidden">Search</span>
