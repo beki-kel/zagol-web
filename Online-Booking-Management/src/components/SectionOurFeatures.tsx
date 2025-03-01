@@ -21,7 +21,7 @@ const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
       } ${className}`}
       data-nc-id="SectionOurFeatures"
     >
-      <div className="lg:w-1/2 lg:flex lg:justify-center items-end">
+      <div className="hidden lg:w-1/2 lg:flex lg:justify-center items-end">
         <Image src={rightImg} alt="" height={500} />
       </div>
       <div

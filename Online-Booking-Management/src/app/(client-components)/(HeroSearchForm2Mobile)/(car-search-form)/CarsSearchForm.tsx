@@ -20,7 +20,7 @@ const CarsSearchForm = () => {
 
   const [dropOffLocationType, setDropOffLocationType] = useState<
     "same" | "different"
-  >("same");
+  >("different");
 
   const renderInputLocationPickup = () => {
     const isActive = fieldNameShow === "locationPickup";
@@ -126,7 +126,7 @@ const CarsSearchForm = () => {
         <div
           className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer ${
             dropOffLocationType === "same"
-              ? "bg-black text-white shadow-black/10 shadow-lg"
+              ? "bg-[#1f88c5] text-white shadow-lg"
               : "border border-neutral-300 dark:border-neutral-700"
           }`}
           onClick={(e) => setDropOffLocationType("same")}
@@ -136,7 +136,7 @@ const CarsSearchForm = () => {
         <div
           className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer ${
             dropOffLocationType === "different"
-              ? "bg-black text-white shadow-black/10 shadow-lg"
+              ? "bg-[#1f88c5] text-white shadow-lg"
               : "border border-neutral-300 dark:border-neutral-700"
           }`}
           onClick={(e) => setDropOffLocationType("different")}
@@ -150,8 +150,6 @@ const CarsSearchForm = () => {
   return (
     <div>
       <div className="w-full space-y-5">
-        {renderRadioBtn()}
-
         {renderInputLocationPickup()}
         {/*  */}
         {dropOffLocationType === "different" && renderInputLocationDropoff()}

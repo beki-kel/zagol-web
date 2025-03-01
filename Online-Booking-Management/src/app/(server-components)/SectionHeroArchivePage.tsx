@@ -22,7 +22,7 @@ const SectionHeroArchivePage: FC<SectionHeroArchivePageProps> = ({
 }) => {
   return (
     <div
-      className={`nc-SectionHeroArchivePage flex flex-col relative ${className}`}
+      className={`nc-SectionHeroArchivePage md:flex md:flex-col relative hidden ${className}`}
       data-nc-id="SectionHeroArchivePage"
     >
       <div className="flex flex-col lg:flex-row lg:items-center">

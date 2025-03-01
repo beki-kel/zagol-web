@@ -1,6 +1,7 @@
 "use client";
 
 import React, { Fragment, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Dialog, Tab, Transition } from "@headlessui/react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { XMarkIcon } from "@heroicons/react/24/solid";
@@ -11,12 +12,14 @@ import CarsSearchForm from "./(car-search-form)/CarsSearchForm";
 import FlightSearchForm from "./(flight-search-form)/FlightSearchForm";
 
 const HeroSearchForm2Mobile = () => {
+  const router = useRouter();
   const [showModal, setShowModal] = useState(false);
+  const [selectedTab, setSelectedTab] = useState(0);
 
   // FOR RESET ALL DATA WHEN CLICK CLEAR BUTTON
   const [showDialog, setShowDialog] = useState(false);
   let [, , resetIsShowingDialog] = useTimeoutFn(() => setShowDialog(true), 1);
-  //
+
   function closeModal() {
     setShowModal(false);
   }
@@ -25,6 +28,17 @@ const HeroSearchForm2Mobile = () => {
     setShowModal(true);
   }
 
+  const handleSubmit = () => {
+    closeModal();
+    if (selectedTab === 0) {
+      router.push("/stay-listings/listing-stay");
+    } else if (selectedTab === 1) {
+      router.push("/car-listings/listing-car");
+    } else if (selectedTab === 2) {
+      router.push("/flight-listings/listing-flights");
+    }
+  };
+
   const renderButtonOpenModal = () => {
     return (
       <button
@@ -32,16 +46,14 @@ const HeroSearchForm2Mobile = () => {
         className="relative flex items-center w-full border border-neutral-200 dark:border-neutral-6000 px-4 py-2 pr-11 rounded-full shadow-lg"
       >
         <MagnifyingGlassIcon className="flex-shrink-0 w-5 h-5" />
-
         <div className="ml-3 flex-1 text-left overflow-hidden">
           <span className="block font-medium text-sm">Where to?</span>
-          <span className="block mt-0.5 text-xs font-light text-neutral-500 dark:text-neutral-400 ">
+          <span className="block mt-0.5 text-xs font-light text-neutral-500 dark:text-neutral-400">
             <span className="line-clamp-1">
               Anywhere • Any week • Add guests
             </span>
           </span>
         </div>
-
         <span className="absolute right-2 top-1/2 transform -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full border border-neutral-200 dark:border-neutral-6000 dark:text-neutral-300">
           <svg
             viewBox="0 0 16 16"
@@ -80,44 +92,38 @@ const HeroSearchForm2Mobile = () => {
               >
                 <Dialog.Panel className="relative h-full overflow-hidden flex-1 flex flex-col justify-between ">
                   {showDialog && (
-                    <Tab.Group manual>
+                    <Tab.Group
+                      manual
+                      selectedIndex={selectedTab}
+                      onChange={setSelectedTab}
+                    >
                       <div className="absolute left-4 top-4">
-                        <button className="" onClick={closeModal}>
+                        <button onClick={closeModal}>
                           <XMarkIcon className="w-5 h-5 text-black dark:text-white" />
                         </button>
                       </div>
-
                       <Tab.List className="pt-12 flex w-full justify-center font-semibold text-sm sm:text-base text-neutral-500 dark:text-neutral-400 space-x-6 sm:space-x-8">
-                        {["Stay", "Experiences", "Cars", "Flights"].map(
-                          (item, index) => (
-                            <Tab key={index} as={Fragment}>
-                              {({ selected }) => (
-                                <div className="relative focus:outline-none focus-visible:ring-0 outline-none select-none">
-                                  <div
-                                    className={`${
-                                      selected
-                                        ? "text-black dark:text-white"
-                                        : ""
-                                    }  `}
-                                  >
-                                    {item}
-                                  </div>
-                                  {selected && (
-                                    <span className="absolute inset-x-0 top-full border-b-2 border-black dark:border-white"></span>
-                                  )}
+                        {["Stay", "Cars", "Flights"].map((item, index) => (
+                          <Tab key={index} as={Fragment}>
+                            {({ selected }) => (
+                              <div className="relative focus:outline-none focus-visible:ring-0 outline-none select-none">
+                                <div
+                                  className={`${
+                                    selected ? "text-[#2995D3]" : ""
+                                  }`}
+                                >
+                                  {item}
                                 </div>
-                              )}
-                            </Tab>
-                          )
-                        )}
+                                {selected && (
+                                  <span className="absolute inset-x-0 top-full border-b-2 border-black dark:border-white"></span>
+                                )}
+                              </div>
+                            )}
+                          </Tab>
+                        ))}
                       </Tab.List>
                       <div className="flex-1 pt-3 px-1.5 sm:px-4 flex overflow-hidden">
                         <Tab.Panels className="flex-1 overflow-y-auto hiddenScrollbar py-4">
-                          <Tab.Panel>
-                            <div className="transition-opacity animate-[myblur_0.4s_ease-in-out]">
-                              <StaySearchForm />
-                            </div>
-                          </Tab.Panel>
                           <Tab.Panel>
                             <div className="transition-opacity animate-[myblur_0.4s_ease-in-out]">
                               <StaySearchForm />
@@ -146,11 +152,7 @@ const HeroSearchForm2Mobile = () => {
                         >
                           Clear all
                         </button>
-                        <ButtonSubmit
-                          onClick={() => {
-                            closeModal();
-                          }}
-                        />
+                        <ButtonSubmit onClick={handleSubmit} />
                       </div>
                     </Tab.Group>
                   )}

@@ -210,7 +210,7 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({}) => {
 
   const renderSidebarDetail = () => {
     return (
-      <div className="listingSection__wrap lg:shadow-xl">
+      <div className="listingSection__wrap mb-12 sm:mb-0 lg:shadow-xl">
         <span className="text-2xl font-semibold block">
           Pick up and drop off
         </span>

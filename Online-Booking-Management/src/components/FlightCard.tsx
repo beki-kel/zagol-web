@@ -1,5 +1,6 @@
 "use client";
 
+import ButtonPrimary from "@/shared/ButtonPrimary";
 import Image from "next/image";
 import React, { FC, useState } from "react";
 
@@ -80,6 +81,9 @@ const FlightCard: FC<FlightCardProps> = ({ className = "", data }) => {
           <div className="border-t border-neutral-200 dark:border-neutral-700" />
         </div>
         {renderDetailTop()}
+        <div className="w-full flex justify-end mt-6">
+          <ButtonPrimary href={"/checkout"}>Reserve</ButtonPrimary>
+        </div>
       </div>
     );
   };

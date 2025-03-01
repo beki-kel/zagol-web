@@ -30,16 +30,6 @@ const NAV: NavItem[] = [
     icon: MagnifyingGlassIcon,
   },
   {
-    name: "Wishlists",
-    link: "/account-savelists",
-    icon: HeartIcon,
-  },
-  {
-    name: "Log in",
-    link: "/account",
-    icon: UserCircleIcon,
-  },
-  {
     name: "Menu",
     icon: MenuBar,
   },
@@ -102,13 +92,13 @@ const FooterNav = () => {
         key={index}
         href={item.link}
         className={`flex flex-col items-center justify-between text-neutral-500 dark:text-neutral-300/90 ${
-          isActive ? "text-neutral-900 dark:text-neutral-100" : ""
+          isActive ? "text-neutral-900 dark:text-neutral-10" : ""
         }`}
       >
-        <item.icon className={`w-6 h-6 ${isActive ? "text-red-600" : ""}`} />
+        <item.icon className={`w-6 h-6 ${isActive ? "text-[#2995D3]" : ""}`} />
         <span
           className={`text-[11px] leading-none mt-1 ${
-            isActive ? "text-red-600" : ""
+            isActive ? "text-[#2995D3]" : ""
           }`}
         >
           {item.name}

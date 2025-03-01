@@ -21,7 +21,7 @@ const FlightSearchForm = () => {
 
   const [dropOffLocationType, setDropOffLocationType] = useState<
     "Round-trip" | "One-way" | ""
->("Round-trip");
+  >("Round-trip");
   const [flightClassState, setFlightClassState] = useState("Economy");
 
   const [guestInput, setGuestInput] = useState<GuestsObject>({
@@ -152,7 +152,7 @@ const FlightSearchForm = () => {
                 <div
                   className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer select-none ${
                     dropOffLocationType === "Round-trip"
-                      ? "bg-black shadow-black/10 shadow-lg text-white"
+                      ? "bg-[#1f88c5]  shadow-lg text-white"
                       : "border border-neutral-300 dark:border-neutral-700"
                   }`}
                   onClick={(e) => setDropOffLocationType("Round-trip")}
@@ -162,7 +162,7 @@ const FlightSearchForm = () => {
                 <div
                   className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer select-none ${
                     dropOffLocationType === "One-way"
-                      ? "bg-black text-white shadow-black/10 shadow-lg"
+                      ? "bg-[#1f88c5]  text-white shadow-lg"
                       : "border border-neutral-300 dark:border-neutral-700"
                   }`}
                   onClick={(e) => setDropOffLocationType("One-way")}
@@ -202,7 +202,7 @@ const FlightSearchForm = () => {
           name={name}
           onChange={() => setFlightClassState(label)}
           type="radio"
-          className="focus:ring-primary-500 h-6 w-6 text-primary-500 border-neutral-300 !checked:bg-primary-500 bg-transparent"
+          className="focus:ring-#1f88c5 h-6 w-6 text-[#1f88c5] border-neutral-300 !checked:bg-[#1f88c5] bg-transparent"
         />
         <label
           htmlFor={id + name}

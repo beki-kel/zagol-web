@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { PathName } from "@/routers/types";
+import Link from "next/link";
 
 interface Props {
   className?: string;
@@ -9,16 +10,16 @@ interface Props {
 const ButtonSubmit: FC<Props> = ({
   className = "",
   onClick = () => {},
-  href = "/listing-stay",
+  href = "/stay-listings/listing-stay",
 }) => {
   return (
-    <button
-      type="submit"
+    <Link
+      href={href}
+      className={`flex-shrink-0 px-4 py-2.5 cursor-pointer rounded-xl bg-[#1f88c5] flex items-center justify-center text-neutral-50 focus:outline-none ${className} relative z-20`}
       onClick={(e) => {
         e.preventDefault();
         onClick();
       }}
-      className={`flex-shrink-0 px-4 py-2.5 cursor-pointer rounded-xl bg-primary-6000 flex items-center justify-center text-neutral-50 focus:outline-none ${className} relative z-20`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +36,7 @@ const ButtonSubmit: FC<Props> = ({
         />
       </svg>
       <span className="ml-2">Search</span>
-    </button>
+    </Link>
   );
 };
 

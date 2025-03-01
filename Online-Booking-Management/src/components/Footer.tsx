@@ -15,46 +15,32 @@ export interface WidgetFooterMenu {
 const widgetMenus: WidgetFooterMenu[] = [
   {
     id: "5",
-    title: "Getting started",
-    menus: [
-      { href: "#", label: "Installation" },
-      { href: "#", label: "Release Notes" },
-      { href: "#", label: "Upgrade Guide" },
-      { href: "#", label: "Browser Support" },
-      { href: "#", label: "Editor Support" },
-    ],
-  },
-  {
-    id: "1",
     title: "Explore",
     menus: [
-      { href: "#", label: "Design features" },
-      { href: "#", label: "Prototyping" },
-      { href: "#", label: "Design systems" },
-      { href: "#", label: "Pricing" },
-      { href: "#", label: "Security" },
+      { href: "#searchForm", label: "Book" },
+      { href: "#aboutUs", label: "About Us" },
+      { href: "#FeaturedPackages", label: "Packages" },
+      { href: "/contact", label: "Contact Us" },
     ],
   },
+
   {
     id: "2",
-    title: "Resources",
+    title: "Find us on",
     menus: [
-      { href: "#", label: "Best practices" },
-      { href: "#", label: "Support" },
-      { href: "#", label: "Developers" },
-      { href: "#", label: "Learn design" },
-      { href: "#", label: "Releases" },
+      { href: "#", label: "linkedin" },
+      { href: "#", label: "Youtube" },
+      { href: "#", label: "Facebook" },
+      { href: "#", label: "Instagram" },
     ],
   },
   {
     id: "4",
-    title: "Community",
+    title: "Our Policies",
     menus: [
-      { href: "#", label: "Discussion Forums" },
+      { href: "#", label: "Refund Policy" },
       { href: "#", label: "Code of Conduct" },
-      { href: "#", label: "Community Resources" },
-      { href: "#", label: "Contributing" },
-      { href: "#", label: "Concurrent Mode" },
+      { href: "#", label: "Privacy and security" },
     ],
   },
 ];
@@ -63,10 +49,10 @@ const Footer: React.FC = () => {
   const renderWidgetMenuItem = (menu: WidgetFooterMenu, index: number) => {
     return (
       <div key={index} className="text-sm">
-        <h2 className="font-semibold text-neutral-700 dark:text-neutral-200">
+        <h2 className="font-semibold text-[#2995D3] dark:text-neutral-200 text-center">
           {menu.title}
         </h2>
-        <ul className="mt-5 space-y-4">
+        <ul className="mt-5 space-y-4 text-center">
           {menu.menus.map((item, index) => (
             <li key={index}>
               <a
@@ -87,15 +73,10 @@ const Footer: React.FC = () => {
     <>
       <FooterNav />
 
-      <div className="nc-Footer relative py-24 lg:py-28 border-t border-neutral-200 dark:border-neutral-700">
-        <div className="container grid grid-cols-2 gap-y-10 gap-x-5 sm:gap-x-8 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-10 ">
-          <div className="grid grid-cols-4 gap-5 col-span-2 md:col-span-4 lg:md:col-span-1 lg:flex lg:flex-col">
-            <div className="col-span-2 md:col-span-1">
-              <Logo />
-            </div>
-            <div className="col-span-2 flex items-center md:col-span-3">
-              <SocialsList1 className="flex items-center space-x-3 lg:space-x-0 lg:flex-col lg:space-y-2.5 lg:items-start" />
-            </div>
+      <div className="hidden md:block nc-Footer relative py-10 border-t border-neutral-200 dark:border-neutral-700">
+        <div className="container hidden md:grid grid-cols-2 gap-y-10 gap-x-5 sm:gap-x-8 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-10  ">
+          <div className="flex flex-col items-center justify-center">
+            <Logo />
           </div>
           {widgetMenus.map(renderWidgetMenuItem)}
         </div>
