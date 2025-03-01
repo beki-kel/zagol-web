@@ -1,35 +1,36 @@
+"use client";
 import SectionHeroArchivePage from "@/app/(server-components)/SectionHeroArchivePage";
 import BgGlassmorphism from "@/components/BgGlassmorphism";
 import SectionSliderNewCategories from "@/components/SectionSliderNewCategories";
 import SectionSubscribe2 from "@/components/SectionSubscribe2";
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import SectionGridFilterCard from "../SectionGridFilterCard";
+import ListingFlightLoadingSkeleton from "../listingFlightLoadingSkeleton";
 
 export interface ListingFlightsPageProps {}
 
 const ListingFlightsPage: FC<ListingFlightsPageProps> = ({}) => {
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className={`nc-ListingFlightsPage relative overflow-hidden `}>
-      <BgGlassmorphism />
-
-      <div className="container relative">
-        {/* SECTION HERO */}
-        <SectionHeroArchivePage
-          currentPage="Flights"
-          currentTab="Flights"
-          listingType={
-            <>
-              <i className="text-2xl las la-plane-departure"></i>
-              <span className="ml-2.5">1599 flights</span>
-            </>
-          }
-          className="pt-10 pb-24 lg:pb-28 lg:pt-16 "
-        />
-
-        {/* SECTION */}
-        <SectionGridFilterCard className="pb-24 lg:pb-28" />
-      </div>
-    </div>
+    <>
+      {showContent ? (
+        <div className="container relative">
+          <SectionGridFilterCard className="pb-24 lg:pb-28" />
+        </div>
+      ) : (
+        <div className="container">
+          <ListingFlightLoadingSkeleton />
+        </div>
+      )}
+    </>
   );
 };
 

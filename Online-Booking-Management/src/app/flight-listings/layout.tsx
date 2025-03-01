@@ -12,8 +12,18 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <BgGlassmorphism />
 
       {/* SECTION HERO */}
-      <div className="container pt-10 pb-24 lg:pt-16 lg:pb-28">
-        <SectionHeroArchivePage currentPage="Stays" currentTab="Stays" />
+      <div className="container relative">
+        <SectionHeroArchivePage
+          currentPage="Flights"
+          currentTab="Flights"
+          listingType={
+            <>
+              <i className="text-2xl las la-plane-departure"></i>
+              <span className="ml-2.5">1599 flights</span>
+            </>
+          }
+          className="pt-10 pb-24 lg:pb-28 lg:pt-16 "
+        />
       </div>
 
       {children}

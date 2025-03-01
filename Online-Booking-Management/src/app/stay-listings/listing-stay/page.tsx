@@ -1,7 +1,7 @@
 "use client";
 import React, { FC, useEffect, useState } from "react";
 import SectionGridFilterCard from "../SectionGridFilterCard";
-import ListingStayLoadingSkeleton from "../listingStayLoadingSkeleton";
+import ListingStayLoadingSkeleton from "../listingStayAndCarLoadingSkeleton";
 
 export interface ListingStayPageProps {}
 
@@ -11,7 +11,7 @@ const ListingStayPage: FC<ListingStayPageProps> = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowContent(true);
-    }, 2000); // 2 second delay
+    }, 3000); // 2 second delay
     return () => clearTimeout(timer);
   }, []);
 
