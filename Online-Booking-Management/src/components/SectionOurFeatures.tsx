@@ -29,7 +29,7 @@ const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
           type === "type1" ? "lg:pl-16" : "lg:pr-16"
         }`}
       >
-        <h2 className="font-semibold text-4xl mt-5">Happening cities </h2>
+        <h2 className="font-semibold text-4xl mt-5">About Us </h2>
 
         <ul className="space-y-10 mt-16">
           <li className="space-y-4">

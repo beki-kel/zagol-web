@@ -183,6 +183,13 @@ export const NAVIGATION_DEMO: NavItemType[] = [
     name: "Packages",
     type: "none",
   },
+
+  {
+    id: ncNanoId(),
+    href: "/contact",
+    name: "Contact Us",
+    type: "none",
+  },
 ];
 
 export const NAVIGATION_ALTERNATE: NavItemType[] = [
