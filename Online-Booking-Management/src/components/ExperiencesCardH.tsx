@@ -61,7 +61,7 @@ const ExperiencesCardH: FC<ExperiencesCardHProps> = ({
             </h2>
           </div>
           <div className="flex items-center space-x-4 text-sm text-neutral-500 dark:text-neutral-400">
-            <StartRating reviewCount={reviewCount} point={reviewStart} />
+            <StartRating point={reviewStart} />
             <span>· </span>
             <div className="flex items-center">
               <span className="hidden sm:inline-block  text-base">
