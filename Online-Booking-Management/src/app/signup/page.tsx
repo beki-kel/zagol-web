@@ -80,14 +80,6 @@ const PageSignUp: FC<PageSignUpProps> = ({}) => {
             </label>
             <ButtonPrimary type="submit">Continue</ButtonPrimary>
           </form>
-
-          {/* ==== */}
-          <span className="block text-center text-neutral-700 dark:text-neutral-300">
-            Already have an account? {` `}
-            <Link href="/login" className="font-semibold underline">
-              Sign in
-            </Link>
-          </span>
         </div>
       </div>
     </div>
