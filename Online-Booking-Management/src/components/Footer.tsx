@@ -28,8 +28,8 @@ const widgetMenus: WidgetFooterMenu[] = [
     id: "2",
     title: "Find us on",
     menus: [
-      { href: "#", label: "linkedin" },
       { href: "#", label: "Youtube" },
+      { href: "#", label: "linkedin" },
       { href: "#", label: "Facebook" },
       { href: "#", label: "Instagram" },
     ],
