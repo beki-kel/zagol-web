@@ -17,7 +17,7 @@ import SectionClientSay from "@/components/SectionClientSay";
 const DEMO_CATS: TaxonomyType[] = [
   {
     id: "1",
-    href: "/listing-stay-map",
+    href: "/stay-listings/listing-stay",
     name: "New Yourk",
     taxonomy: "category",
     count: 188288,
@@ -26,7 +26,7 @@ const DEMO_CATS: TaxonomyType[] = [
   },
   {
     id: "2",
-    href: "/listing-stay-map",
+    href: "/stay-listings/listing-stay",
     name: "Singapore",
     taxonomy: "category",
     count: 188288,
@@ -35,7 +35,7 @@ const DEMO_CATS: TaxonomyType[] = [
   },
   {
     id: "3",
-    href: "/listing-stay-map",
+    href: "/stay-listings/listing-stay",
     name: "Paris",
     taxonomy: "category",
     count: 188288,
@@ -44,7 +44,7 @@ const DEMO_CATS: TaxonomyType[] = [
   },
   {
     id: "4",
-    href: "/listing-stay-map",
+    href: "/stay-listings/listing-stay",
     name: "London",
     taxonomy: "category",
     count: 188288,
@@ -53,7 +53,7 @@ const DEMO_CATS: TaxonomyType[] = [
   },
   {
     id: "5",
-    href: "/listing-stay-map",
+    href: "/stay-listings/listing-stay",
     name: "Tokyo",
     taxonomy: "category",
     count: 188288,
@@ -62,7 +62,7 @@ const DEMO_CATS: TaxonomyType[] = [
   },
   {
     id: "6",
-    href: "/listing-stay-map",
+    href: "/stay-listings/listing-stay",
     name: "Maldives",
     taxonomy: "category",
     count: 188288,
@@ -71,7 +71,7 @@ const DEMO_CATS: TaxonomyType[] = [
   },
   {
     id: "7",
-    href: "/listing-stay-map",
+    href: "/stay-listings/listing-stay",
     name: "Italy",
     taxonomy: "category",
     count: 188288,
