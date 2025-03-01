@@ -27,7 +27,7 @@ const SectionHeroArchivePage: FC<SectionHeroArchivePageProps> = ({
     >
       <div className="flex flex-col lg:flex-row lg:items-center">
         <div className="w-full">
-          <HeroSearchForm currentPage={currentPage} currentTab={currentTab} />
+          <HeroSearchForm currentTab={currentTab} />
         </div>
       </div>
     </div>
