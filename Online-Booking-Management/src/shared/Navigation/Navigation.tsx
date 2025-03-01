@@ -1,11 +1,16 @@
 import React from "react";
 import NavigationItem from "./NavigationItem";
-import { NAVIGATION_DEMO } from "@/data/navigation";
+import { NAVIGATION_DEMO, NAVIGATION_ALTERNATE } from "@/data/navigation";
+import { usePathname } from "next/navigation";
 
 function Navigation() {
+  const pathname = usePathname();
+  const navigationItems =
+    pathname === "/" ? NAVIGATION_DEMO : NAVIGATION_ALTERNATE;
+
   return (
     <ul className="nc-Navigation hidden lg:flex lg:flex-wrap lg:space-x-1 relative">
-      {NAVIGATION_DEMO.map((item) => (
+      {navigationItems.map((item) => (
         <NavigationItem key={item.id} menuItem={item} />
       ))}
     </ul>

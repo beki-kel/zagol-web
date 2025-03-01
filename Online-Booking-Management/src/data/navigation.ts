@@ -185,6 +185,27 @@ export const NAVIGATION_DEMO: NavItemType[] = [
   },
 ];
 
+export const NAVIGATION_ALTERNATE: NavItemType[] = [
+  {
+    id: ncNanoId(),
+    href: "/",
+    name: "Home",
+    type: "none",
+  },
+  {
+    id: ncNanoId(),
+    href: "/experience-listings/listing-experiences",
+    name: "Packages",
+    type: "none",
+  },
+  {
+    id: ncNanoId(),
+    href: "/contact",
+    name: "Contact Us",
+    type: "none",
+  },
+];
+
 export const NAVIGATION_DEMO_2: NavItemType[] = [
   {
     id: ncNanoId(),

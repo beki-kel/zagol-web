@@ -36,8 +36,7 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({}) => {
       <div className="listingSection__wrap !space-y-6">
         {/* 1 */}
         <div className="flex justify-between items-center">
-          <Badge color="pink" name="BMW car" />
-          <LikeSaveBtns />
+          <Badge color="blue" name="BMW car" />
         </div>
 
         {/* 2 */}
@@ -52,17 +51,6 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({}) => {
           <span>
             <i className="las la-map-marker-alt"></i>
             <span className="ml-1"> Tokyo, Jappan</span>
-          </span>
-        </div>
-
-        {/* 4 */}
-        <div className="flex items-center">
-          <Avatar hasChecked sizeClass="h-10 w-10" radius="rounded-full" />
-          <span className="ml-2.5 text-neutral-500 dark:text-neutral-400">
-            Car owner{" "}
-            <span className="text-neutral-900 dark:text-neutral-200 font-medium">
-              Kevin Francis
-            </span>
           </span>
         </div>
 
@@ -83,82 +71,6 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({}) => {
             <i className="las la-suitcase text-2xl"></i>
             <span className=""> 2 bags</span>
           </div>
-        </div>
-      </div>
-    );
-  };
-
-  //
-  const renderSectionTienIch = () => {
-    return (
-      <div className="listingSection__wrap">
-        <div>
-          <h2 className="text-2xl font-semibold">
-            Vehicle parameters & utilities{" "}
-          </h2>
-          <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-            Questions are at the heart of making things great.
-          </span>
-        </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
-        {/* 6 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 gap-x-10 text-sm text-neutral-700 dark:text-neutral-300 ">
-          {/* TIEN ICH 1 */}
-          {Amenities_demos.map((item, index) => (
-            <div key={index} className="flex items-center space-x-4 ">
-              <div className="w-10 flex-shrink-0">
-                <Image src={item.icon} alt="" />
-              </div>
-              <span>{item.name}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
-
-  const renderSection2 = () => {
-    return (
-      <div className="listingSection__wrap">
-        <h2 className="text-2xl font-semibold">Car descriptions</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
-        <div className="text-neutral-6000 dark:text-neutral-300">
-          <p>
-            Until the all-new TUCSON hits the dealer showrooms you can check it
-            out in our Showroom Walkaround video. Watch the video and join our
-            product specialist as he gives you an up-close look of our latest
-            SUV
-            <br />
-            <br />
-            Questions are at the heart of making things great. Watch our
-            celebrity-filled TV ad and you’ll see that when we say “everything,”
-            we mean everything.
-          </p>
-        </div>
-      </div>
-    );
-  };
-
-  const renderSection3 = () => {
-    return (
-      <div className="listingSection__wrap">
-        <div>
-          <h2 className="text-2xl font-semibold">Include </h2>
-          <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-            Included in the price
-          </span>
-        </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
-        {/* 6 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 text-sm text-neutral-700 dark:text-neutral-300 ">
-          {includes_demo
-            .filter((_, i) => i < 12)
-            .map((item) => (
-              <div key={item.name} className="flex items-center space-x-3">
-                <i className="las la-check-circle text-2xl"></i>
-                <span>{item.name}</span>
-              </div>
-            ))}
         </div>
       </div>
     );
@@ -253,122 +165,16 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({}) => {
             <span>Fast response - within a few hours</span>
           </div>
         </div>
-
-        {/* == */}
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
-        <div>
-          <ButtonSecondary href="/author">See host profile</ButtonSecondary>
-        </div>
-      </div>
-    );
-  };
-
-  const renderSection6 = () => {
-    return (
-      <div className="listingSection__wrap">
-        {/* HEADING */}
-        <h2 className="text-2xl font-semibold">Reviews (23 reviews)</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
-
-        {/* Content */}
-        <div className="space-y-5">
-          <FiveStartIconForRate iconClass="w-6 h-6" className="space-x-0.5" />
-          <div className="relative">
-            <Input
-              fontClass=""
-              sizeClass="h-16 px-4 py-3"
-              rounded="rounded-3xl"
-              placeholder="Share your thoughts ..."
-            />
-            <ButtonCircle
-              className="absolute right-2 top-1/2 transform -translate-y-1/2"
-              size=" w-12 h-12 "
-            >
-              <ArrowRightIcon className="w-5 h-5" />
-            </ButtonCircle>
-          </div>
-        </div>
-
-        {/* comment */}
-        <div className="divide-y divide-neutral-100 dark:divide-neutral-800">
-          <CommentListing className="py-8" />
-          <CommentListing className="py-8" />
-          <CommentListing className="py-8" />
-          <CommentListing className="py-8" />
-          <div className="pt-8">
-            <ButtonSecondary>View more 20 reviews</ButtonSecondary>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
-  const renderSection7 = () => {
-    return (
-      <div className="listingSection__wrap">
-        {/* HEADING */}
-        <div>
-          <h2 className="text-2xl font-semibold">Location</h2>
-          <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-            San Diego, CA, United States of America (SAN-San Diego Intl.)
-          </span>
-        </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
-
-        {/* MAP */}
-        <div className="aspect-w-5 aspect-h-5 sm:aspect-h-3 ring-1 ring-black/10 rounded-xl z-0">
-          <div className="rounded-xl overflow-hidden z-0">
-            <iframe
-              width="100%"
-              height="100%"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAGVJfZMAKYfZ71nzL_v5i3LjTTWnCYwTY&q=Eiffel+Tower,Paris+France"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
-  const renderSection8 = () => {
-    return (
-      <div className="listingSection__wrap">
-        {/* HEADING */}
-        <h2 className="text-2xl font-semibold">Things to know</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
-
-        {/* CONTENT */}
-        <div>
-          <h4 className="text-lg font-semibold">Cancellation policy</h4>
-          <span className="block mt-3 text-neutral-500 dark:text-neutral-400">
-            Lock in this fantastic price today, cancel free of charge anytime.
-            Reserve now and pay at pick-up.
-          </span>
-        </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
-
-        {/* CONTENT */}
-        <div>
-          <h4 className="text-lg font-semibold">Special Note</h4>
-          <span className="block mt-3 text-neutral-500 dark:text-neutral-400">
-            We asked ourselves, “How can we make the dash not only look better,
-            but also give the driver a better look outside?” The unexpected
-            answer is having no hood above the available 10.25-inch digital
-            instrument cluster...
-          </span>
-        </div>
       </div>
     );
   };
 
   const renderSidebarPrice = () => {
     return (
-      <div className="listingSectionSidebar__wrap shadow-xl">
+      <div className="listingSectionSidebar__wrap shadow-xl ">
         {/* PRICE */}
         <div className="flex justify-between">
-          <span className="text-3xl font-semibold">
+          <span className="text-3xl font-semibold text-[#2995D3] ">
             $19
             <span className="ml-1 text-base font-normal text-neutral-500 dark:text-neutral-400">
               /day
@@ -392,7 +198,7 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({}) => {
           <div className="border-b border-neutral-200 dark:border-neutral-700"></div>
           <div className="flex justify-between font-semibold">
             <span>Total</span>
-            <span>$199</span>
+            <span className="text-[#2995D3] ">$199</span>
           </div>
         </div>
 
@@ -410,7 +216,7 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({}) => {
         </span>
         <div className="mt-8 flex">
           <div className="flex-shrink-0 flex flex-col items-center py-2">
-            <span className="block w-6 h-6 rounded-full border border-neutral-400"></span>
+            <span className="block w-6 h-6 rounded-full border border-neutral-400 bg-[#2995D3] "></span>
             <span className="block flex-grow border-l border-neutral-400 border-dashed my-1"></span>
             <span className="block w-6 h-6 rounded-full border border-neutral-400"></span>
           </div>
@@ -438,7 +244,7 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({}) => {
   };
 
   return (
-    <div className={` nc-ListingCarDetailPage `}>
+    <div className={` nc-ListingCarDetailPage lg:pb-20`}>
       {/* SINGLE HEADER */}
       <header className="rounded-md sm:rounded-xl">
         <div className="relative grid grid-cols-4 gap-1 sm:gap-2">
@@ -516,15 +322,7 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({}) => {
         <div className="w-full lg:w-3/5 xl:w-2/3 space-y-8 lg:pr-10 lg:space-y-10">
           {renderSection1()}
           <div className="block lg:hidden">{renderSidebarDetail()}</div>
-          {renderSectionTienIch()}
-          {renderSection2()}
-          {renderSection3()}
-          <SectionDateRange />
-
           {renderSection5()}
-          {renderSection6()}
-          {renderSection7()}
-          {renderSection8()}
         </div>
 
         {/* SIDEBAR */}

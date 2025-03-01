@@ -52,7 +52,7 @@ const GuestsInput: FC<GuestsInputProps> = ({ className = "flex-1" }) => {
               className={`relative z-10 flex-1 flex text-left items-center p-3 space-x-3 focus:outline-none`}
             >
               <div className="text-neutral-300 dark:text-neutral-400">
-                <UserPlusIcon className="w-5 h-5 lg:w-7 lg:h-7" />
+                <UserPlusIcon className="w-5 h-5 lg:w-7 lg:h-7 text-[#2995D3] " />
               </div>
               <div className="flex-grow">
                 <span className="block xl:text-lg font-semibold">

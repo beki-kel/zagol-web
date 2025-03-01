@@ -32,8 +32,6 @@ const StayCard2: FC<StayCard2Props> = ({
     saleOff,
     isAds,
     price,
-    reviewStart,
-    reviewCount,
     id,
   } = data;
 
@@ -47,7 +45,6 @@ const StayCard2: FC<StayCard2Props> = ({
           imageClass="rounded-lg"
           href={href}
         />
-        <BtnLikeIcon isLiked={like} className="absolute right-3 top-3 z-[1]" />
         {saleOff && <SaleOffBadge className="absolute left-3 top-3" />}
       </div>
     );
@@ -61,7 +58,6 @@ const StayCard2: FC<StayCard2Props> = ({
             {listingCategory.name} · {bedrooms} beds
           </span>
           <div className="flex items-center space-x-2">
-            {isAds && <Badge name="ADS" color="green" />}
             <h2
               className={`font-semibold capitalize text-neutral-900 dark:text-white ${
                 size === "default" ? "text-base" : "text-base"
@@ -73,7 +69,7 @@ const StayCard2: FC<StayCard2Props> = ({
           <div className="flex items-center text-neutral-500 dark:text-neutral-400 text-sm space-x-1.5">
             {size === "default" && (
               <svg
-                className="h-4 w-4"
+                className="h-4 w-4 text-[#2995D3]"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -97,7 +93,7 @@ const StayCard2: FC<StayCard2Props> = ({
         </div>
         <div className="w-14 border-b border-neutral-100 dark:border-neutral-800"></div>
         <div className="flex justify-between items-center">
-          <span className="text-base font-semibold">
+          <span className="text-base font-semibold text-[#2995D3]">
             {price}
             {` `}
             {size === "default" && (
@@ -106,9 +102,6 @@ const StayCard2: FC<StayCard2Props> = ({
               </span>
             )}
           </span>
-          {!!reviewStart && (
-            <StartRating reviewCount={reviewCount} point={reviewStart} />
-          )}
         </div>
       </div>
     );

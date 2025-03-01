@@ -23,7 +23,7 @@ const SectionGridFeaturedPackages: FC<SectionGridFeaturedPackagesProps> = ({
   experiencesListings = DEMO_DATA,
   gridClass = "",
   heading = "Featured Packages",
-  subHeading = "Popular Packages recommends for you",
+  subHeading = "Popular Packages recommended for you",
   headingIsCenter,
 
   cardType = "card2",

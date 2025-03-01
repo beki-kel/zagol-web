@@ -59,7 +59,7 @@ const TabFilters = () => {
 
   const renderXClear = () => {
     return (
-      <span className="w-4 h-4 rounded-full bg-primary-500 text-white flex items-center justify-center ml-3 cursor-pointer">
+      <span className="w-4 h-4 rounded-full bg-[#2995D3] text-white flex items-center justify-center ml-3 cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-3 w-3"
@@ -83,7 +83,7 @@ const TabFilters = () => {
           <>
             <Popover.Button
               className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-6000 focus:outline-none ${
-                open ? "!border-primary-500 " : ""
+                open ? "!border-[#2995D3]  " : ""
               }`}
             >
               <span>Type of experiences</span>
@@ -192,7 +192,7 @@ const TabFilters = () => {
         {({ open, close }) => (
           <>
             <Popover.Button
-              className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-primary-500 bg-primary-50 text-primary-700 focus:outline-none `}
+              className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-[#2995D3]  bg-[#2995D3] bg-opacity-10 text-[#2995D3]  focus:outline-none `}
             >
               <span>
                 {`$${convertNumbThousand(
@@ -299,7 +299,7 @@ const TabFilters = () => {
       <div
         className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border focus:outline-none cursor-pointer transition-all ${
           isOnSale
-            ? "border-primary-500 bg-primary-50 text-primary-700"
+            ? "border-[#2995D3]  bg-[#2995D3] bg-opacity-10 text-[#2995D3] "
             : "border-neutral-300 dark:border-neutral-700"
         }`}
         onClick={() => setIsOnSale(!isOnSale)}

@@ -24,7 +24,7 @@ const HeroSearchForm: FC<HeroSearchFormProps> = ({
 
   const renderTab = () => {
     return (
-      <ul className="ml-2 sm:ml-6 md:ml-12 flex justify-center space-x-5 sm:space-x-8 lg:space-x-11 overflow-x-auto hiddenScrollbar">
+      <ul className="ml-2 sm:ml-6 md:ml-12 flex space-x-5 sm:space-x-8 lg:space-x-11 overflow-x-auto hiddenScrollbar">
         {tabs.map((tab) => {
           const active = tab === tabActive;
           return (
@@ -33,7 +33,7 @@ const HeroSearchForm: FC<HeroSearchFormProps> = ({
               className={` flex-shrink-0 flex items-center cursor-pointer text-sm lg:text-xl font-medium ${
                 active
                   ? "text-[#2995D3]"
-                  : "text-neutral-500 hover:text-blue-300 dark:hover:text-neutral-400"
+                  : " hover:text-blue-300 dark:hover:text-neutral-400"
               } `}
               key={tab}
             >

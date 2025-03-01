@@ -92,7 +92,7 @@ const CarCard: FC<CarCardProps> = ({
 
   return (
     <div
-      className={`nc-CarCard group relative border border-[#2995D3] dark:border-neutral-700 rounded-3xl overflow-hidden bg-white dark:bg-neutral-900 ${className}`}
+      className={`nc-CarCard group relative border border-[#2995D3] rounded-3xl overflow-hidden bg-white dark:bg-neutral-900 ${className}`}
       data-nc-id="CarCard"
     >
       <Link href={href} className="flex flex-col">
